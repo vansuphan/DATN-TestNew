@@ -1,0 +1,48 @@
+//  Rem mixin -----------------------------------------------------------------
+//
+//  Populates a given property with rem values, with px fallback
+//
+//	@property:	The property to populate, eg "margin" or "padding"
+//	@values: 	Comma-separated list of values to be inserted
+//
+//	Example: @include rem(margin, 10, 20, 30, 40);
+
+@mixin rem($property, $values...) {
+
+  $max: length($values);
+  $px-values: '';
+  $rem-values: '';
+
+  @for $i from 1 through $max {
+    $value: '';
+    @if nth($values, $i) == 'auto' {
+      $value: nth($values, $i);
+    } @else {
+      $value: #{strip(nth($values, $i))}px;
+    }
+
+    $px-values: #{$px-values + $value};
+
+    @if $i < $max {
+      $px-values: #{$px-values + ' '};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: '';
+    @if nth($values, $i) == 'auto' {
+      $value: nth($values, $i);
+    } @else {
+      $value: rem(strip(nth($values, $i)));
+    }
+
+    $rem-values: #{$rem-values + $value};
+
+    @if $i < $max {
+      $rem-values: #{$rem-values + ' '};
+    }
+  }
+
+  #{$property}: $px-values;
+  #{$property}: $rem-values;
+}

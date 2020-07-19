@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+
+* {
+  -webkit-tap-highlight-color: $webkit-tap-highlight-color;
+}
+
+html {
+  -webkit-backface-visibility: hidden;
+  height: 100%;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100%;
+  background: url(../images/bg.jpg) top no-repeat;
+  background-size: cover;
+  font-family: 'SVNAvenirNextRegular';
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+  line-height: $base-line-height;
+  position: relative;
+  letter-spacing: $letter-space;
+  -webkit-font-smoothing: $font-smoothing;
+  -webkit-backface-visibility: hidden;
+  overflow-x: hidden;
+  // Fixes Chrome 1px shift rendering issue on CSS3 transitions.
+}
+
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: $selection-background;
+  text-shadow: none;
+}
+
+::selection {
+  background: $selection-background;
+  text-shadow: none;
+}
+
+/*
+ * Inputs placeholder default colour and size
+ */
+::-webkit-input-placeholder {
+  color: $placeholder-color;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $placeholder-color;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $placeholder-color;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder-color;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $border-color;
+  margin: 20px 0;
+  padding: 0;
+}
+
+/*
+ * Remove default Paragraph styles.
+ */
+
+p {
+  margin: 0 ;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+textarea,
+input {
+  outline: none;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+
+/** CQ Resets **/
+#CQ * {
+  @include box-sizing(content-box);
+  fieldset {
+    label {
+      @include inline-block;
+    }
+  }
+
+  input {
+    vertical-align: baseline;
+  }
+}

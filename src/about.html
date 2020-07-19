@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- HEADER CONFIGURATION -->
+@@include('partials/head.html', {
+"page_title": "Trang chủ",
+"page_desc": "",
+"base_url": ""
+})
+
+<body>
+    <!-- HEADER / MENU NAVIGATION -->
+    @@include('partials/menu.html', {
+    "active_nav_class": "menu2"
+    })
+
+    <!-- Your Page HTML here -->
+    <main id="pAbout">
+        <div class="sample " data-abc="123">
+            Fix framework bugs on Windows OS
+            <br />Something goes here!
+            <br />Fix performance overloaded on Windows machine
+            <br />Chúng tôi là những chữ được viết bằng Tiếng Việt đây!
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    @@include('partials/footer.html')
+
+    <!-- POPUPS / MODALS -->
+    @@include('partials/popups.html')
+
+    <!-- PRELOADER -->
+    @@include('partials/preloader.html')
+
+    <img src="123">
+
+
+    <!-- Default JS files -->
+    <!-- <script src="assets/js/vendor/jquery/jquery.min.js"></script> -->
+    @@include('partials/polyfills.js.html')
+    @@include('partials/loader.js.html')
+    <!-- Sử dụng 1 trong 2 lazyload bên dưới -->
+    <!-- <script type="text/javascript" async src="assets/js/vendor/lazysizes/lazysizes.min.js"></script> -->
+    <script type="text/javascript" async src="assets/js/digitop/lazyloadCustom.js"></script>
+    <script type="text/javascript" async src="assets/js/main.js" async></script>
+</body>
+
+</html>

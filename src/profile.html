@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- HEADER CONFIGURATION -->
+@@include('partials/head.html', {
+"page_title": "Trang chủ",
+"page_desc": "",
+"base_url": ""
+})
+
+<body>
+    <!-- HEADER / MENU NAVIGATION -->
+    @@include('partials/menu.html', {
+    "active_nav_class": "menu2"
+    })
+
+    <!-- Your Page HTML here -->
+    <main id="pProfile">
+        <section class="profileWrap fullScreen  stagger-up">
+            <div class="container">
+                <h2><span><img src="assets/images/text-6.png"></span></h2>
+                <h2 class="ttMb">Tài khoản của bạn</h2>
+                <div class="contentWrap">
+                    <div class="bg" style="background:url(assets/images/bg-3.jpg) center no-repeat"></div>
+                    <div class="yourProfile">
+                        <div class="img" style="background: url(assets/images/demo/img-1.jpg);">
+                            <img src="assets/images/b.gif">
+                        </div>
+                        <div class="copy">
+                            <p><img src="assets/images/ico-name.png"><em>Họ & Tên</em><span>Nguyễn Văn An</span></p>
+                            <p><img src="assets/images/ico-marker.png"><em>Địa chỉ</em><span>123 Lê Lợi</span></p>
+                            <p><img src="assets/images/ico-marker.png"><em>Tỉnh Thành</em><span>TP HCM</span></p>
+                            <p><img src="assets/images/ico-phone.png"><em>Số điện thoại</em><span>082421xxxx</span></p>
+                        </div>
+                        
+                    </div>
+                    <div class="btnWrap">
+                        <p>
+                            <a class="btn2" href="#"><span><img src="assets/images/text-7.png"></span></a>
+                        </p>
+                        <a href="#">Đăng xuất</a>
+                    </div>
+                    <img class="ele ele-1" src="assets/images/ele-7.png">
+                    <img class="ele ele-2" src="assets/images/ele-8.png">
+                </div>
+            </div>
+            </div>
+        </section>
+        <img class="ft" src="assets/images/ft.png">
+    </main>
+
+
+
+    <!-- POPUPS / MODALS -->
+    @@include('partials/popups.html')
+
+    <!-- PRELOADER -->
+    @@include('partials/preloader.html')
+
+
+    <!-- Default JS files -->
+    @@include('partials/polyfills.js.html')
+    @@include('partials/loader.js.html')
+    <!-- Sử dụng 1 trong 2 lazyload bên dưới -->
+    <!-- <script type="text/javascript" async src="assets/js/vendor/lazysizes/lazysizes.min.js"></script>-->
+    <script type="text/javascript" async src="assets/js/digitop/lazyloadCustom.js"></script>
+    <script type="text/javascript" async src="assets/js/main.js" async></script>
+</body>
+
+</html>
